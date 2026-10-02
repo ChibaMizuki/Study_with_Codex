@@ -1,0 +1,16 @@
+[project]
+name = "study-with-codex"
+version = "0.1.0"
+description = "Python algorithm study workspace"
+requires-python = ">=3.12,<3.13"
+dependencies = ["numpy>=2.0,<3", "scipy>=1.14,<2", "matplotlib>=3.9,<4"]
+
+[dependency-groups]
+dev = ["pytest>=8,<10", "ruff>=0.11,<1"]
+
+[tool.pytest.ini_options]
+testpaths = ["voronoi/tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 100
