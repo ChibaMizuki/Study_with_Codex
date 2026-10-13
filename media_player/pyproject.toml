@@ -1,0 +1,27 @@
+[project]
+name = "media-player"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "pyside6>=6.12.0",
+    "python-vlc>=3.0.21203",
+    "yt-dlp[default]>=2026.8.19",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.workspace]
+members = []
+
+[dependency-groups]
+dev = [
+    "pillow>=12.3.0",
+    "pyinstaller>=6.22.3",
+    "pytest>=9.1.1",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "--basetemp=outputs/test-temp"
